@@ -1,12 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>My Website</title>
+
+<style>
+body{
+font-family: Arial;
+text-align:center;
+background:#0f172a;
+color:white;
+margin:0;
+}
+
+header{
+background:#2563eb;
+padding:20px;
+font-size:28px;
+}
+
+.container{
+padding:40px;
+}
+
+button{
+padding:12px 20px;
+margin:10px;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+.btn1{background:#22c55e;color:white;}
+.btn2{background:#ef4444;color:white;}
+.btn3{background:#f59e0b;color:white;}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+margin:20px;
+display:inline-block;
+width:200px;
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+background:#020617;
+}
+</style>
+
 </head>
 
 <body>
-<h1>Welcome to my website</h1>
-<p>This is my first free website.</p>
-</body>
 
+<header>
+My Free Website
+</header>
+
+<div class="container">
+
+<h1>Welcome 👋</h1>
+<p>This is my website hosted for free.</p>
+
+<h2>Options</h2>
+
+<button class="btn1" onclick="changeColor()">Change Background</button>
+
+<button class="btn2" onclick="showMessage()">Show Message</button>
+
+<button class="btn3" onclick="add()">Add 1</button>
+
+<h2 id="counter">0</h2>
+
+<div class="card">
+<h3>Service 1</h3>
+<p>Instagram followers</p>
+</div>
+
+<div class="card">
+<h3>Service 2</h3>
+<p>Likes & Views</p>
+</div>
+
+<div class="card">
+<h3>Service 3</h3>
+<p>Social Media Boost</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 My Website
+</footer>
+
+<script>
+
+let count = 0
+
+function add(){
+count++
+document.getElementById("counter").innerText = count
+}
+
+function showMessage(){
+alert("Welcome to my website 🚀")
+}
+
+function changeColor(){
+document.body.style.background =
+"#"+Math.floor(Math.random()*16777215).toString(16)
+}
+
+</script>
+
+</body>
 </html>
